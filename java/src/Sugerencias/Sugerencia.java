@@ -20,31 +20,22 @@ public abstract class Sugerencia {
   }
 
   public Prenda sugerirParteSup(){
-    this.agregarPartesSuperiores();
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-  protected abstract void agregarPartesSuperiores();
 
   public Prenda sugerirParteInf(){
-    this.agregarPartesInferiores();
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-  protected abstract void agregarPartesInferiores();
-
   public Optional<Prenda> sugerirCalzado(){
-    this.agregarCalzados();
     return calzados.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-  protected abstract void agregarCalzados();
-
   public Prenda sugerirAccesorio(){
-    this.agregarAccesorios();
     return accesorios.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-  protected abstract void agregarAccesorios();
+
 
 }
