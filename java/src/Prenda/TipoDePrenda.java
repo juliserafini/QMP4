@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 public enum TipoDePrenda {
     REMERA {
-      //Cada tipo tiene una lista de que materiales se les permite
       @Override
       public Categoria getCategoria() {
         return Categoria.PARTESUPERIOR;
@@ -84,15 +83,7 @@ public enum TipoDePrenda {
         return 10;
       }
     };
-
-    //Cad una implementa un metodo abstracto que me devuelv la categoria
     public abstract Categoria getCategoria();
-
-    public boolean materialPosible(TipoMaterial material) {
-      return this.tipoMaterialPrenda().contains(material);
-    }
-
-    protected abstract List<TipoMaterial> tipoMaterialPrenda();
 
     public abstract Integer temperaturaMAXAdecuada();
 
