@@ -28,7 +28,7 @@ public abstract class Sugerencia {
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-  public Optional<Prenda> sugerirCalzado(){
+  public Prenda sugerirCalzado(){
     return calzados.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
