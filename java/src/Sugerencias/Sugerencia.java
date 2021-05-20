@@ -13,11 +13,7 @@ public class Sugerencia {
   List<Prenda> partesInferiores= new ArrayList<Prenda>();
   List<Prenda> calzados = new ArrayList<Prenda>();
   List<Prenda> accesorios = new ArrayList<Prenda>();
-  Clima climaReciente;
-
-  public void climaActual(Clima climaReciente){
-    this.climaReciente = climaReciente;
-  }
+  Clima climaReciente = new Clima;
 
   public Prenda sugerirParteSup(){
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
