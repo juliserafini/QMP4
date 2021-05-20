@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class Sugerencia {
+public class Sugerencia {
 
   List<Prenda> partesSuperiores = new ArrayList<Prenda>();
   List<Prenda> partesInferiores= new ArrayList<Prenda>();
