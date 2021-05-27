@@ -18,6 +18,10 @@ public class Usuario {
 
   }
 
+  public void hacerModificacion(Solicitud soli){
+    miGuardarropas.hacerModificacion(soli);
+  }
+
   public void deshacerSolicitud(Solicitud soli){
     miGuardarropas.deshacerSolicitud(soli);
   }
