@@ -19,7 +19,6 @@ public class Sugerencia {
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
 
-
   public Prenda sugerirParteInf(){
     return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
   }
