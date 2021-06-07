@@ -1,7 +1,7 @@
 package Guardarropas;
 
 import Prenda.Caracteristica;
-import Usuario.Usuario;
+import Personas.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;

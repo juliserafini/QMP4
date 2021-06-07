@@ -2,11 +2,10 @@ package Guardarropas;
 
 import Prenda.Prenda;
 import Prenda.Caracteristica;
-import Usuario.Usuario;
+import Personas.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Guardarropas {
   //hay una lista de prendas que cumplen ciertas condicones para poder
@@ -46,6 +45,7 @@ public class Guardarropas {
   }
 
   public List<Prenda> getListaDePrendasParaDeterminadoGuardarropas() {
+    cargarLista();
     return listaDePrendasParaDeterminadoGuardarropas;
   }
 

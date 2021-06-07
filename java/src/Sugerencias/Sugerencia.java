@@ -5,32 +5,18 @@ import Prenda.Prenda;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class Sugerencia {
+public interface Sugerencia {
+  public Prenda sugerirParteSup();
 
-  List<Prenda> partesSuperiores = new ArrayList<Prenda>();
-  List<Prenda> partesInferiores= new ArrayList<Prenda>();
-  List<Prenda> calzados = new ArrayList<Prenda>();
-  List<Prenda> accesorios = new ArrayList<Prenda>();
-  Clima climaReciente = new Clima;
+  public Prenda sugerirParteInf();
 
-  public Prenda sugerirParteSup(){
-    return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
-  }
+  public Prenda sugerirCalzado();
 
-  public Prenda sugerirParteInf(){
-    return partesInferiores.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
-  }
+  public Prenda sugerirAccesorio();
 
-  public Prenda sugerirCalzado(){
-    return calzados.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
-  }
+  public void cargarLista();
+  public List<Prenda> sugerir();
 
-  public Prenda sugerirAccesorio(){
-    return accesorios.stream().filter(prenda -> prenda.sePuedeUsarSegunClima(climaReciente.condicionesClimaticas())).findAny();
-  }
-
-
-
+  public static List<String> getAlertas();
 }
